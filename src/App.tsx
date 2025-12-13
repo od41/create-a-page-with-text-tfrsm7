@@ -4,21 +4,25 @@ import { Button } from '@/components/ui/button'
 import AnimatedBackground from './components/AnimatedBackground'
 import LoveNYHero from './components/LoveNYHero'
 import FloatingHearts from './components/FloatingHearts'
+import InteractiveElements from './components/InteractiveElements'
 
 function App() {
   const [message, setMessage] = useState("")
 
   return (
     <AnimatedBackground>
-      {/* Floating Hearts Layer */}
+      {/* Floating Hearts Layer - background layer */}
       <FloatingHearts />
       
-      <div className="flex flex-col items-center justify-center min-h-screen px-4">
+      {/* Interactive Elements Layer - click-to-create hearts */}
+      <InteractiveElements />
+      
+      <div className="flex flex-col items-center justify-center min-h-screen px-4 relative z-50 pointer-events-none">
         {/* Hero Component */}
         <LoveNYHero />
 
         {/* Interactive Section */}
-        <div className="text-center space-y-6 max-w-2xl mt-8">
+        <div className="text-center space-y-6 max-w-2xl mt-8 pointer-events-auto">
           <div className="pt-8">
             <Button 
               onClick={() => setMessage("Welcome to the city of dreams! 💕")}
