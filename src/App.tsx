@@ -3,12 +3,16 @@ import './App.css'
 import { Button } from '@/components/ui/button'
 import AnimatedBackground from './components/AnimatedBackground'
 import LoveNYHero from './components/LoveNYHero'
+import FloatingHearts from './components/FloatingHearts'
 
 function App() {
   const [message, setMessage] = useState("")
 
   return (
     <AnimatedBackground>
+      {/* Floating Hearts Layer */}
+      <FloatingHearts />
+      
       <div className="flex flex-col items-center justify-center min-h-screen px-4">
         {/* Hero Component */}
         <LoveNYHero />
