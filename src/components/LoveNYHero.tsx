@@ -77,9 +77,9 @@ const LoveNYHero = () => {
         {isComplete && (
           <div
             className="absolute inset-0 -z-10 animate-pulse-glow"
-            style={
+            style={{
               background: 'radial-gradient(ellipse at center, rgba(236, 72, 153, 0.3) 0%, transparent 70%)',
-            }
+            }}
           />
         )}
       </div>
