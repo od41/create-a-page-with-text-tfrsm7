@@ -1,16 +1,81 @@
 @import "tailwindcss";
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+/* Import custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* CSS Variables for theme colors */
+:root {
+  --color-primary-pink: #ec4899;
+  --color-secondary-pink: #db7093;
+  --color-rose: #e11d48;
+  --color-purple-dark: #1a0b2e;
+  --color-purple-medium: #4a2c6d;
+  --color-purple-light: #8b5fa8;
+  --color-pink-light: #fce7f3;
+  --color-pink-glow: rgba(236, 72, 153, 0.3);
 }
 
-#root { 
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-purple-dark);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-purple-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-pink);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-pink);
+}
+
+/* Utility classes for font families */
+.font-dancing {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
 }
